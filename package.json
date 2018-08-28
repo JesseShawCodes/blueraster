@@ -5,6 +5,7 @@
   "main": "scripts/start.js",
   "scripts": {
     "start": "node scripts/start",
+    "build": "react-scripts build",
     "dist": "export NODE_ENV=production;rm -rf dist;node scripts/build;node scripts/prerender;",
     "lint": "eslint src/js/**/*.js",
     "test": "jest"
@@ -36,6 +37,11 @@
     "moduleNameMapper": {
       "esri/Map": "<rootDir>/__mocks__/function.js",
       "esri/views/MapView": "<rootDir>/__mocks__/MapView.js",
+      "esri/views/SceneView": "<rootDir>/__mocks__/SceneView.js",
+      "esri/layers/FeatureLayer": "<rootDir>/_mocks_/Raster.js",
+      "esri/featureLayer": "<rootDir>/_mocks_/featureLayer.js",
+      "esri/layers/MapImageLayer": "<rootDir>/_mocks_/mapImageLayer.js",
+      "esri/tasks/Locator": "<rootDir>/_mocks_/Locator.js",
       "^js(.*)$": "<rootDir>/src/js$1",
       "^dojo(.*)$": "<rootDir>/__mocks__/object.js",
       "^esri(.*)$": "<rootDir>/__mocks__/object.js",
@@ -45,11 +51,17 @@
     }
   },
   "dependencies": {
+    "@material-ui/core": "^3.0.0",
+    "prop-types": "latest",
+    "@material-ui/lab": "latest",
     "core-js": "^2.5.1",
-    "react": "^16.0.0",
+    "jss-nested": "^6.0.1",
+    "react": "^16.4.2",
     "react-dom": "^16.0.0",
+    "react-redux": "^5.0.7",
     "redux": "^3.7.2",
-    "webpack": "^3.6.0"
+    "redux-logger": "^3.0.6",
+    "webpack": "*"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",

@@ -47,7 +47,7 @@ const STYLESHEET = {
 };
 
 export default class ModalWrapper extends Component {
-  displayName: 'ModalWrapper';
+  // displayName: 'ModalWrapper';
 
   render () {
     let { visible, close, theme } = this.props;

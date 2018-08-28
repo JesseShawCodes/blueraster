@@ -1,5 +1,5 @@
 import { loadCSS } from 'js/utils/loaders';
-import App from 'js/components/App';
+import Root from './components/Root';
 import Dom from 'react-dom';
 import React from 'react';
 
@@ -19,7 +19,7 @@ loadCSS('//js.arcgis.com/4.5/esri/css/main.css');
 
 // Initialize the app
 let mount = document.getElementById('react-mount');
-Dom.render(<App />, mount);
+Dom.render(<Root />, mount);
 
 // Enable HMR for development mode, Only use this is you are using Redux or something
 // similar for state management, this will effectively reload the whole page

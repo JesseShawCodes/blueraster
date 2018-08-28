@@ -11,7 +11,7 @@ export const TEXT = {
 };
 
 export const MAP_OPTIONS = {
-  basemap: 'streets-vector'
+  basemap: 'satellite'
 };
 
 export const VIEW_OPTIONS = {
