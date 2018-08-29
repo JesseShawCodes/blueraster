@@ -52,6 +52,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin(defineEnvPlugin()),
     new webpack.optimize.OccurrenceOrderPlugin(),
+    /*
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         screw_ie8: true,
@@ -65,6 +66,7 @@ module.exports = {
         screw_ie8: true
       }
     }),
+    */
     new ExtractTextPlugin('css/critical.css'),
     new InlineStylePlugin('css/critical.css'),
     new HtmlWebpackPlugin({

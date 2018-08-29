@@ -1,6 +1,8 @@
 # Ignore dist directory
 dist
 
+/node_modules
+
 # Ignore artifacts and dependencies
 node_modules
 .DS_Store
