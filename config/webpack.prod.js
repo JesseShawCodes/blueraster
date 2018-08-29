@@ -4,6 +4,7 @@ const InlineStylePlugin = require('./inline-style');
 const defineEnvPlugin = require('./webpack.env');
 const webpack = require('webpack');
 const path = require('path');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const root = process.cwd();
 
@@ -52,7 +53,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin(defineEnvPlugin()),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJsPlugin({
       compressor: {
         screw_ie8: true,
         warnings: false
