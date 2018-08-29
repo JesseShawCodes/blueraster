@@ -54,17 +54,14 @@ module.exports = {
     new webpack.DefinePlugin(defineEnvPlugin()),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new UglifyJsPlugin({
-      compressor: {
-        screw_ie8: true,
-        warnings: false
+      cache: true,
+      parallel: true,
+      uglifyOptions: {
+        compress: false,
+        ecma: 6,
+        mangle: true
       },
-      mangle: {
-        screw_ie8: true
-      },
-      output: {
-        comments: false,
-        screw_ie8: true
-      }
+      sourceMap: true
     }),
     new ExtractTextPlugin('css/critical.css'),
     new InlineStylePlugin('css/critical.css'),
