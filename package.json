@@ -52,10 +52,11 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.0.0",
-    "prop-types": "latest",
     "@material-ui/lab": "latest",
+    "clean-webpack-plugin": "^0.1.19",
     "core-js": "^2.5.1",
     "jss-nested": "^6.0.1",
+    "prop-types": "latest",
     "react": "^16.4.2",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.7",
